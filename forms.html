@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Registration form</title>
 </head>
 <body>
+<h1>Registration</h1>
+<h2>Please, fill in all fields</h2>
+
+<p>
+    Don't forget to submit!
+</p>
+<form name="personalInformationForm">
+    <fieldset>
+        <legend>Personal information</legend>
+        <br>
+        First name:<br>
+        <input type="text " name="firstName"><br>
+        Last name: <br>
+        <input type="text" name="lastName"><br>
+        Age:<br>
+        <input type="number" min="0" max="130" name="age"><br>
+        Gender:<br>
+        <input type="radio" name="gender" value="male" checked>Male <input type="radio" name="gender" value="female">Female
+        <br>
+        Your martial status:
+        <select name="maritalStatus">
+            <option value="single">Single</option>
+            <option value="engaged">Engaged</option>
+            <option value="married">Married</option>
+        </select> <br>
+        Tell us why you want to join us<br>
+        <textarea name="userMotivation" rows="4" cols="50" maxlength="200"> </textarea>><br>
+        <input type="checkbox" name="servicePolicy"> You agree to service policy<br>
+        <input type="checkbox" name="newsletter"> You agree to subscribe newsletter<br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </fieldset>
+
+
+</form>
+
 
 </body>
 </html>
