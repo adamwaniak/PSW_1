@@ -2,9 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>Tables page</title>
+    <style>
+        table {
+            border: 2px solid black;
+            width: 1000px;
+            height: auto;
+        }
 
+        th {
+            border: 1px solid black;
+            text-align: left;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+
+        }
+        tr#tr1{
+            width: 100%;
+            background-color: #f1f1c1;
+        }
+        table#t1{
+            width: 100%;
+            background-color: #00f110;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+
+<body>
+<table >
+    <caption>Company contacts</caption>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Age</th>
+        <th>Photo</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Smith</td>
+        <td>52</td>
+        <td><img src="https://www.biography.com/.image/t_share/MTIwNjA4NjMzOTc0MTk1NzI0/john-smith-9486928-1-402.jpg"
+                 width="200" height="200" alt="john smith photo"></td>
+    </tr>
+    <tr id="tr1">
+        <td colspan="2">Adam Smith</td>
+        <td>43</td>
+        <td><img src="https://pbs.twimg.com/profile_images/378800000615491760/fdc4f5b9a7ade246cd54f19668f9337e_400x400.jpeg"
+                 width="200" height="200" alt="john smith photo"></td>
+
+
+    </tr>
+    <tr >
+        <td>Walt</td>
+        <td>Kowalsky</td>
+        <td rowspan="2">58</td>
+        <td><img src="http://fotelprzykominku.blox.pl/resource/Gran_Torino4.jpg"
+                 width="200" height="200" alt="john smith photo"></td>
+    </tr>
+    <tr>
+        <td>Maks</td>
+        <td>Siwulski</td>
+        <td><img src="https://previews.123rf.com/images/copit/copit0806/copit080600041/3218088-50-years-old-man-Stock-Photo.jpg"
+                 width="200" height="200" alt="john smith photo"></td>
+    </tr>
+    <tr>
+        <td colspan="3">Table in table</td>
+        <td>
+            <table id="t1">
+                <tr ><td>nested table</td><td>nested table</td><td>nested table</td><td>nested table</td></tr>
+                <tr ><td>nested table</td><td>nested table</td><td>nested table</td><td>nested table</td></tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+<a href="index.html">Return to main page</a>
 </body>
 </html>

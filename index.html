@@ -2,9 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home page</title>
 </head>
 <body>
+<h1><b>Welcome at our web page
+    <small>&reg</small>
+</b></h1>
+<p>BaseLine property</p>
+<canvas id="myCanvas" width="400" height="200" style="border:1px solid #d3d3d3;"></canvas>
+<script>
 
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    //Draw a red line at y=100
+    ctx.moveTo(0,100);
+    ctx.lineTo(400,100);
+    ctx.stroke();
+
+
+    ctx.font = "20px Arial";
+
+    //Place each word at y=100 with different textBaseline values
+    ctx.textBaseline = "top";
+    ctx.fillText("Top", 5, 100);
+    ctx.textBaseline = "bottom";
+    ctx.fillText("Bottom", 50, 100);
+    ctx.textBaseline = "middle";
+    ctx.fillText("Middle", 120, 100);
+    ctx.textBaseline = "alphabetic";
+    ctx.fillText("Alphabetic", 190, 100);
+    ctx.textBaseline = "hanging";
+    ctx.fillText("Hanging", 290, 100);
+
+</script>
+
+<ul>
+    <li><a href="graphic.html">Graphic</a></li>
+    <li><a href="forms.html">Registration form</a> </li>
+    <li><a href="lists.html">Lists</a> </li>
+    <li><a href="tables.html">Tables</a> </li>
+    <li><a href="links.html">Links</a> </li>
+
+</ul>
 </body>
+<footer>
+    Authors:
+        Jarzębski Filip, Waniak Adam &copy
+</footer>
 </html>
