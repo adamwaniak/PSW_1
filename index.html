@@ -15,7 +15,6 @@
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
 
-    //Draw a red line at y=100
     ctx.moveTo(0,100);
     ctx.lineTo(400,100);
     ctx.stroke();
@@ -23,7 +22,6 @@
 
     ctx.font = "20px Arial";
 
-    //Place each word at y=100 with different textBaseline values
     ctx.textBaseline = "top";
     ctx.fillText("Top", 5, 100);
     ctx.textBaseline = "bottom";
