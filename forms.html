@@ -16,27 +16,55 @@
         <legend>Personal information</legend>
         <br>
         First name:<br>
-        <input type="text" name="firstName"><br>
+        <label for="firstName">
+            <input type="text" name="firstName" id="firstName">
+        </label><br>
         Last name: <br>
-        <input type="text" name="lastName"><br>
+        <label for="lastName">
+            <input type="text" name="lastName" id="lastName">
+        </label><br>
         Age:<br>
-        <input type="number" min="0" max="130" name="age"><br>
+        <label for="age">
+            <input type="number" min="0" max="130" name="age" id="age">
+        </label><br>
         Gender:<br>
         <label for="male">
             <input type="radio" name="gender" value="male" id="male" checked>Male
         </label>
-        <input type="radio" name="gender" value="female">Female
-        <br>
+        <label for="female">
+            <input type="radio" name="gender" value="female" id="female">Female
+        </label><br>
         Your marital status:
-        <select name="maritalStatus">
-            <option value="single">Single</option>
-            <option value="engaged">Engaged</option>
-            <option value="married">Married</option>
-        </select> <br>
+        <label>
+            <select name="maritalStatus">
+                <option value="single">Single</option>
+                <option value="engaged">Engaged</option>
+                <option value="married">Married</option>
+            </select>
+        </label><br>
+        What car do you have?
+        <label>
+            <select name="car">
+                <optgroup label="Polish Cars">
+                    <option value="syrenka">Syrenka</option>
+                    <option value="polonez">Polonez</option>
+                </optgroup>
+                <optgroup label="German Cars">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </optgroup>
+            </select>
+        </label><br>
         Tell us why you want to join us<br>
-        <textarea name="userMotivation" rows="4" cols="50" maxlength="200"> </textarea>><br>
-        <input type="checkbox" name="servicePolicy"> You agree to service policy<br>
-        <input type="checkbox" name="newsletter"> You agree to subscribe newsletter<br><br>
+        <label>
+            <textarea name="userMotivation" rows="4" cols="50" maxlength="200"> </textarea>
+        </label><br>
+        <label>
+            <input type="checkbox" name="servicePolicy"> You agree to service policy
+        </label><br>
+        <label>
+            <input type="checkbox" name="newsletter"> You agree to subscribe newsletter
+        </label><br><br>
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
 
@@ -48,7 +76,7 @@
 
 <footer>
     <p>
-        Super Web Service &copy
+        Super Web Service &copy;
     </p>
 </footer>
 
