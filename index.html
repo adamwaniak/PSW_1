@@ -2,54 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home page</title>
-    <meta name="keywords" content="web page, html5, pwr, links, authors, base line">
-    <meta name="description" content="This is website which we made at Wroclaw University of Science and Technology.
-                                      It's the start page of our project.">
+    <title>Strona główna</title>
+    <meta name="keywords" content="web page, html5, biblioteka, opoczno">
+    <meta name="description" content="Strona bilbioteki miejskiej w Opocznie.">
 
 </head>
 <body>
-<h1><b>Welcome at our web page
-    <small>&reg;</small>
-</b></h1>
-<p>BaseLine property</p>
-<canvas id="myCanvas" width="400" height="200" style="border:1px solid #d3d3d3;"></canvas>
-<script>
+<h1><b>Witamy na stronie biblioteki miejskiej w Opocznie</b></h1>
 
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
+<section>
+    <h1>Menu główne</h1>
+    <section>
+        <nav>
+            <a href="forms.html">Rejsetracja</a> |
+            <a href="lists.html">Lista książek</a> |
+            <a href="forms.html">Aktualności</a>
+        </nav>
+    </section>
+</section>
 
-    ctx.moveTo(0,100);
-    ctx.lineTo(400,100);
-    ctx.stroke();
+<article>
+    <h4>Spotkanie autorskie z Jackiem Dukajem</h4>
+    <p>W dniu <mark>13 pażdziernika</mark> w naszej bibliotece odbyło się spotkanie autorskie z Jackiem Dukajem. Opowiadał o swoim najnowszym dziele.
+    Oczywiście była okazja do uzyskania podpisu przez fanów oraz zakupienia podpisanej wersji nowej ksiązki.</p>
+</article>
 
 
-    ctx.font = "20px Arial";
-
-    ctx.textBaseline = "top";
-    ctx.fillText("Top", 5, 100);
-    ctx.textBaseline = "bottom";
-    ctx.fillText("Bottom", 50, 100);
-    ctx.textBaseline = "middle";
-    ctx.fillText("Middle", 120, 100);
-    ctx.textBaseline = "alphabetic";
-    ctx.fillText("Alphabetic", 190, 100);
-    ctx.textBaseline = "hanging";
-    ctx.fillText("Hanging", 290, 100);
-
-</script>
-
-<ul>
-    <li><a href="graphic.html">Graphic</a></li>
-    <li><a href="forms.html">Registration form</a> </li>
-    <li><a href="lists.html">Lists</a> </li>
-    <li><a href="tables.html">Tables</a> </li>
-    <li><a href="links.html">Links</a> </li>
-
-</ul>
 <footer>
-    Authors:
-    Jarzębski Filip, Waniak Adam &copy;
+    <details> Autorzy: Jarzębski Filip, Waniak Adam &copy;
+        <summary>Copyright 2017-2020</summary>
+        <p>Jesteśmy studentami Politechniki Wrocławskiej, na kierunku Informatyka na wydziale Informatyki i Zarządzania.
+        Naszą pasją jest tworzenie stron internetowych.</p>
+        <aside>
+            <p>Polecamy PWr.</p>
+        </aside>
+    </details>
 </footer>
 </body>
 
