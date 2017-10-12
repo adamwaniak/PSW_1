@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Registration form</title>
+    <title>Rejestracja</title>
 
     <meta name="keywords" content="web page, html5, pwr, form, registration, feedback, personal information">
     <meta name="description" content="This is website which we made at Wroclaw University of Science and Technology.
@@ -11,66 +11,49 @@
 
 </head>
 <body>
-<h1>Registration</h1>
-<h2>Please, fill in all fields</h2>
+<h1>Rejestracja do biblioteki</h1>
 
-<p>
-    Don't forget to submit!
-</p>
+<!-- TODO: meter tag in forms.html-->
 <form name="personalInformationForm">
     <fieldset>
-        <legend>Personal information</legend>
+        <legend>Informacje osobowe</legend>
         <br>
-        First name:<br>
+        Imię:<br>
         <label for="firstName">
-            <input type="text" name="firstName" id="firstName">
+            <input type="text" name="firstName" id="firstName" autocomplete="on" autofocus>
         </label><br>
-        Last name: <br>
+        Nazwisko: <br>
         <label for="lastName">
-            <input type="text" name="lastName" id="lastName">
+            <input type="text" name="lastName" id="lastName" autocomplete="on" required>
         </label><br>
-        Age:<br>
-        <label for="age">
-            <input type="number" min="0" max="130" name="age" id="age">
-        </label><br>
-        Gender:<br>
-        <label for="male">
-            <input type="radio" name="gender" value="male" id="male" checked>Male
-        </label>
-        <label for="female">
-            <input type="radio" name="gender" value="female" id="female">Female
-        </label><br>
-        Your marital status:
+        Miesiąc urodzin: <br>
         <label>
-            <select name="maritalStatus">
-                <option value="single">Single</option>
-                <option value="engaged">Engaged</option>
-                <option value="married">Married</option>
-            </select>
-        </label><br>
-        What car do you have?
+            <input list="months" autocomplete="on" name="month">
+            <datalist id="months">
+                <option value="January"></option>
+                <option value="February"></option>
+                <option value="March"></option>
+                <option value="April"></option>
+                <option value="May"></option>
+                <option value="June"></option>
+                <option value="July"></option>
+                <option value="August"></option>
+                <option value="September"></option>
+                <option value="October"></option>
+                <option value="November"></option>
+                <option value="December"></option>
+            </datalist>
+        </label> <br>
+        Adres mailowy: <br>
         <label>
-            <select name="car">
-                <optgroup label="Polish Cars">
-                    <option value="syrenka">Syrenka</option>
-                    <option value="polonez">Polonez</option>
-                </optgroup>
-                <optgroup label="German Cars">
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </optgroup>
-            </select>
-        </label><br>
-        Tell us why you want to join us<br>
+            <input type="email" autocomplete="on" name="email"  required >
+        </label> Na przykład: example@example.com <br>
+        Telefon: <br>
         <label>
-            <textarea name="userMotivation" rows="4" cols="50" maxlength="200"> </textarea>
-        </label><br>
-        <label>
-            <input type="checkbox" name="servicePolicy"> You agree to service policy
-        </label><br>
-        <label>
-            <input type="checkbox" name="newsletter"> You agree to subscribe newsletter
-        </label><br><br>
+            <input type="tel" autocomplete="on" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+        </label> Na przykład: 312-719-545<br>
+
+
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
 
