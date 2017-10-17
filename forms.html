@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>Rejestracja</title>
@@ -18,16 +18,19 @@
     <fieldset>
         <legend>Informacje osobowe</legend>
         <br>
-        Imię:<br>
+
         <label for="firstName">
+            Imię:<br>
             <input type="text" name="firstName" id="firstName" autocomplete="on" autofocus>
         </label><br>
-        Nazwisko: <br>
+
         <label for="lastName">
+            Nazwisko: <br>
             <input type="text" name="lastName" id="lastName" autocomplete="on" required>
         </label><br>
-        Miesiąc urodzin: <br>
+
         <label>
+            Miesiąc urodzin: <br>
             <input list="months" autocomplete="on" name="month">
             <datalist id="months">
                 <option value="January"></option>
@@ -44,12 +47,14 @@
                 <option value="December"></option>
             </datalist>
         </label> <br>
-        Adres mailowy: <br>
+
         <label>
-            <input type="email" autocomplete="on" name="email"  required >
+            Adres mailowy: <br>
+            <input type="email" autocomplete="on" name="email" required>
         </label> Na przykład: example@example.com <br>
-        Telefon: <br>
+
         <label>
+            Telefon: <br>
             <input type="tel" autocomplete="on" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
         </label> Na przykład: 312-719-545<br>
 
