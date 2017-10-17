@@ -13,7 +13,6 @@
 <body>
 <h1>Rejestracja do biblioteki</h1>
 
-<!-- TODO: meter tag in forms.html-->
 <form name="personalInformationForm">
     <fieldset>
         <legend>Informacje osobowe</legend>
@@ -21,12 +20,12 @@
 
         <label for="firstName">
             Imię:<br>
-            <input type="text" name="firstName" id="firstName" autocomplete="on" autofocus>
+            <input type="text" name="firstName" id="firstName" autocomplete="on" placeholder="Imię" autofocus>
         </label><br>
 
         <label for="lastName">
             Nazwisko: <br>
-            <input type="text" name="lastName" id="lastName" autocomplete="on" required>
+            <input type="text" name="lastName" id="lastName" autocomplete="on" placeholder="Nazwisko" required>
         </label><br>
 
         <label>
@@ -50,7 +49,7 @@
 
         <label>
             Adres mailowy: <br>
-            <input type="email" autocomplete="on" name="email" required>
+            <input type="email" autocomplete="on" name="email" id="email"required>
         </label> Na przykład: example@example.com <br>
 
         <label>
