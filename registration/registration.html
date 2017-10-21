@@ -11,21 +11,26 @@
 
 </head>
 <body>
+<div id="toMainPage">
+
+    <a href="../index/index.html"><img src="http://www.free-icons-download.net/images/return-to--home-page-icon-73306.png" height="50px" width="50px" alt="home icon" id="homeIcon"></a>
+    Strona główna
+</div>
 <h1>Rejestracja do biblioteki</h1>
 
-<form name="personalInformationForm">
+<form name="personalInformationForm" method = "post" action = "http://www.deitel.com">
     <fieldset>
         <legend>Informacje osobowe</legend>
         <br>
 
         <label for="firstName">
             Imię:<br>
-            <input type="text" name="firstName" id="firstName" autocomplete="on" placeholder="Imię" autofocus>
+            <input  name="firstName" id="firstName" autocomplete="on" placeholder="Imię" autofocus>
         </label><br>
 
         <label for="lastName">
             Nazwisko: <br>
-            <input type="text" name="lastName" id="lastName" autocomplete="on" placeholder="Nazwisko" required>
+            <input  name="lastName" id="lastName" autocomplete="on" placeholder="Nazwisko" required>
         </label><br>
 
         <label>
@@ -65,7 +70,6 @@
 
 
 </form>
-<a href="index.html">Wróć do strony głównej</a>
 
 <footer>
     <p>
