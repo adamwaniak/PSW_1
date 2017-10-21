@@ -2,7 +2,6 @@
 Zaprezentuj praktyczne wykorzystanie różnych sposobów zmiany wielkości tekstu na*/
 /*stronie (em, px, pt, %)*/
 
-
 /*7. Zaprezentuj różne sposoby formatowania tekstu oraz ustawianiej jego szerokości*/
 /*(font-weight, font-style, font-variant, font-size, line-height, font-family)*/
 header {
@@ -25,7 +24,7 @@ article h2 {
 article h4 {
     font-size: 20pt;
     line-height: 200%;
-    font-family:Verdana;
+    font-family: Verdana;
 
 }
 
