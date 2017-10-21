@@ -8,29 +8,39 @@
     <meta name="description" content="This is website which we made at Wroclaw University of Science and Technology.
                                       On this page we have a registration form with different elements such as labels,
                                       input boxes, lists, text field, checkboxes and buttons">
+    <link rel="stylesheet" href="../main.css" type="text/css">
+
 
 </head>
 <body>
-<div id="toMainPage">
-
-    <a href="../index/index.html"><img src="http://www.free-icons-download.net/images/return-to--home-page-icon-73306.png" height="50px" width="50px" alt="home icon" id="homeIcon"></a>
-    Strona główna
+<div class="page-header">
+    <nav>
+        <ul id="main-nav" class="nav">
+            <li><a href="../index/index.html" id="home-icon-background"><img
+                    src="http://www.free-icons-download.net/images/return-to--home-page-icon-73306.png" alt="home icon"
+                    id="home-icon"></a></li>
+            <li><a href="../articles/articles.html">Artykuły</a></li>
+            <li><a href="../links/links.html">Lista podstron</a></li>
+            <li><a href="../registration/registration.html">Rejestracja</a></li>
+            <li><a href="../workerList/workersList.html">Lista pracowników</a></li>
+        </ul>
+    </nav>
 </div>
 <h1>Rejestracja do biblioteki</h1>
 
-<form name="personalInformationForm" method = "post" action = "http://www.deitel.com">
+<form name="personalInformationForm" method="post" action="http://www.deitel.com">
     <fieldset>
         <legend>Informacje osobowe</legend>
         <br>
 
         <label for="firstName">
             Imię:<br>
-            <input  name="firstName" id="firstName" autocomplete="on" placeholder="Imię" autofocus>
+            <input name="firstName" id="firstName" autocomplete="on" placeholder="Imię" autofocus>
         </label><br>
 
         <label for="lastName">
             Nazwisko: <br>
-            <input  name="lastName" id="lastName" autocomplete="on" placeholder="Nazwisko" required>
+            <input name="lastName" id="lastName" autocomplete="on" placeholder="Nazwisko" required>
         </label><br>
 
         <label>

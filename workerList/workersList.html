@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Pracownicy biblioteki</title>
 
-        <meta name="keywords" content="web page, html5, opoczno, biblioteka, pracownicy">
-        <meta name="description" content="Pracownicy biblioteki miejsciej w opocznie">
+    <meta name="keywords" content="web page, html5, opoczno, biblioteka, pracownicy">
+    <meta name="description" content="Pracownicy biblioteki miejsciej w opocznie">
+    <link rel="stylesheet" href="../main.css" type="text/css">
 
     <style>
         table {
@@ -24,7 +25,8 @@
             text-align: center;
 
         }
-        tr#tr1{
+
+        tr#tr1 {
             width: 100%;
             background-color: #f1f1c1;
         }
@@ -32,10 +34,18 @@
 </head>
 
 <body>
-<div id="toMainPage">
-
-    <a href="../index/index.html"><img src="http://www.free-icons-download.net/images/return-to--home-page-icon-73306.png" height="50px" width="50px" alt="home icon" id="homeIcon"></a>
-    Strona główna
+<div class="page-header">
+    <nav>
+        <ul id="main-nav" class="nav">
+            <li><a href="../index/index.html" id="home-icon-background"><img
+                    src="http://www.free-icons-download.net/images/return-to--home-page-icon-73306.png" alt="home icon"
+                    id="home-icon"></a></li>
+            <li><a href="../articles/articles.html">Artykuły</a></li>
+            <li><a href="../links/links.html">Lista podstron</a></li>
+            <li><a href="../registration/registration.html">Rejestracja</a></li>
+            <li><a href="../workerList/workersList.html">Lista pracowników</a></li>
+        </ul>
+    </nav>
 </div>
 <table>
     <caption><h3>Pracownicy</h3></caption>
@@ -55,12 +65,13 @@
     <tr id="tr1">
         <td colspan="2">Adam Smith</td>
         <td>43</td>
-        <td><img src="https://pbs.twimg.com/profile_images/378800000615491760/fdc4f5b9a7ade246cd54f19668f9337e_400x400.jpeg"
-                 width="200" height="200" alt="john smith photo"></td>
+        <td><img
+                src="https://pbs.twimg.com/profile_images/378800000615491760/fdc4f5b9a7ade246cd54f19668f9337e_400x400.jpeg"
+                width="200" height="200" alt="john smith photo"></td>
 
 
     </tr>
-    <tr >
+    <tr>
         <td>Walt</td>
         <td>Kowalsky</td>
         <td rowspan="2">58</td>
@@ -70,8 +81,9 @@
     <tr>
         <td>Maks</td>
         <td>Siwulski</td>
-        <td><img src="https://previews.123rf.com/images/copit/copit0806/copit080600041/3218088-50-years-old-man-Stock-Photo.jpg"
-                 width="200" height="200" alt="john smith photo"></td>
+        <td><img
+                src="https://previews.123rf.com/images/copit/copit0806/copit080600041/3218088-50-years-old-man-Stock-Photo.jpg"
+                width="200" height="200" alt="john smith photo"></td>
     </tr>
 
 </table>
