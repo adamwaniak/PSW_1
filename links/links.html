@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista podstron</title>
+    <meta name="keywords" content="web page, html5, pwr, links">
+    <meta name="description" content="Strona zawierająca przydatne linki">
     <link rel="stylesheet" href="../main.css" type="text/css">
+    <link rel="stylesheet" href="links.css" type="text/css">
 
+    <style type = "text/css">
+        em { font-weight: bold;
+             color: darkblue;}
+        h1 {font-family: "Times New Roman", Times, serif;}
+        p  { font-family: sans-serif;}
+        .special {color: cornflowerblue;}
+    </style>
 </head>
 <body>
 <div class="page-header">
@@ -21,5 +31,24 @@
     </nav>
 </div>
 
+<h1 class = "special">Użyteczne linki</h1>
+<p>Zachęcamy do skorzystania z poniższych linków, jeśli chcą Państwo dowiedzieć się czegoś więcej na temat biblioteki miejskiej.</p>
+<p>Wśród informacji są m.in. historia budynku biblioteki, aktualności i <em>ogłoszenia o spotkaniach autorskich.</em></p>
+
+<div>
+    <a href="../index/index.html" class="links">Strona główna</a> |
+    <a href="../articles/articles.html" class="links">Artykuły</a> |
+    <a href="../workerList/workersList.html" class="links">Pracownicy biblioteki</a>
+</div>
+
+
+<p><a href="#el1">Podświetl element 1</a></p>
+<p><a href="#el2">Podświetl element 2</a></p>
+<p id="el1"><b>element 1</b></p>
+<p id="el2"><b>element 2</b></p>
+
+<footer>
+    <p></p>
+</footer>
 </body>
 </html>

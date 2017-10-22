@@ -5,32 +5,10 @@
     <title>Pracownicy biblioteki</title>
 
     <meta name="keywords" content="web page, html5, opoczno, biblioteka, pracownicy">
-    <meta name="description" content="Pracownicy biblioteki miejsciej w opocznie">
+    <meta name="description" content="Pracownicy biblioteki miejsciej w Opocznie">
     <link rel="stylesheet" href="../main.css" type="text/css">
+    <link rel="stylesheet" href="workersList.css" type="text/css">
 
-    <style>
-        table {
-            border: 2px solid black;
-            width: 1000px;
-            height: auto;
-        }
-
-        th {
-            border: 1px solid black;
-            text-align: center;
-        }
-
-        td {
-            border: 1px solid black;
-            text-align: center;
-
-        }
-
-        tr#tr1 {
-            width: 100%;
-            background-color: #f1f1c1;
-        }
-    </style>
 </head>
 
 <body>
@@ -47,9 +25,10 @@
         </ul>
     </nav>
 </div>
+<div style="overflow-x: auto">
 <table>
     <caption><h3>Pracownicy</h3></caption>
-    <tr>
+    <tr id="trHead">
         <th>Imię</th>
         <th>Nazwisko</th>
         <th>Wiek</th>
@@ -62,7 +41,7 @@
         <td><img src="https://www.biography.com/.image/t_share/MTIwNjA4NjMzOTc0MTk1NzI0/john-smith-9486928-1-402.jpg"
                  width="200" height="200" alt="john smith photo"></td>
     </tr>
-    <tr id="tr1">
+    <tr>
         <td colspan="2">Adam Smith</td>
         <td>43</td>
         <td><img
@@ -87,7 +66,7 @@
     </tr>
 
 </table>
-
+</div>
 
 </body>
 </html>
