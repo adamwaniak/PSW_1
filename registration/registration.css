@@ -1,4 +1,4 @@
-footer{
+footer {
     color: white;
     position: absolute;
     bottom: 20px;
@@ -9,7 +9,7 @@ footer{
     background-position: left;
 }
 
-img#logo{
+img#logo {
     position: fixed;
     float: right;
     right: 5px;
@@ -24,7 +24,7 @@ input:checked {
     width: 20px;
 }
 
-input:enabled{
+input:enabled {
     background: lightyellow;
 }
 
@@ -32,12 +32,12 @@ input:disabled {
     background: #dddddd;
 }
 
-input:focus {
-    background-color: lightcyan;
-}
-
 input:required {
     background-color: #ffdad6;
+}
+
+input:focus {
+    background-color: lightcyan;
 }
 
 /*10. Zaprezentuj reguły CSS wykorzystujące wartości atrybutów znaczników HTML.*/
