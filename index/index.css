@@ -1,7 +1,8 @@
-#content {
-    background-image: url("http://clipart-library.com/images/6Tp6RzyGc.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    /*background-position: center;*/
-    /*background-attachment: fixed;*/
+body{
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(to bottom right, #5cff52, #ffd63d);
+    background: -webkit-linear-gradient(to bottom right, #5cff52, #ffd63d); /* Safari */
+    background: -o-linear-gradient(to bottom right, #5cff52, #ffd63d); /* Opera 11.6 to 12.0 */
+    background: -moz-linear-gradient(to bottom right, #5cff52, #ffd63d); /* Firefox 3.6 to 15 */
+
 }

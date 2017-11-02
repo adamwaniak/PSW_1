@@ -2,18 +2,23 @@
 /*3. RGBA, HSLA*/
 
 header {
-    font-family: Palatino Linotype;
+    font-family: Palatino Linotype, sans-serif;
     font-size: xx-large;
     font-weight: bolder;
     font-style: oblique;
     font-variant: small-caps;
     text-shadow: 2px 2px rgb(255, 0, 0);
+    padding-left: 80px;
+    background-image: url("https://t4.ftcdn.net/jpg/01/02/03/55/240_F_102035585_dtVJl2aoxa4Bwty4dc9IwyumxhbtRpFv.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-origin: border-box;
 
 }
 
 article {
     font-size: 120%;
-}
+    }
 
 article h2 {
     font-size: 2em;
@@ -24,12 +29,26 @@ article h2 {
 article h4 {
     font-size: 20pt;
     line-height: 200%;
-    font-family: Verdana;
+    font-family: Verdana, sans-serif;
 
 }
 
 article p {
     font-size: 20px;
     font-weight: 300;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
+    background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+    background: radial-gradient(circle, red, yellow, green); /* Standard syntax */
+
 }
+
+#content {
+
+    /*background-position: center;*/
+    /*background-attachment: fixed;*/
+}
+
+
 
