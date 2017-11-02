@@ -1,15 +1,14 @@
-/*Zad 3
-Zaprezentuj praktyczne wykorzystanie różnych sposobów zmiany wielkości tekstu na*/
-/*stronie (em, px, pt, %)*/
+/*1. Zastosuj właściwość text-shadow*/
+/*3. RGBA, HSLA*/
 
-/*7. Zaprezentuj różne sposoby formatowania tekstu oraz ustawianiej jego szerokości*/
-/*(font-weight, font-style, font-variant, font-size, line-height, font-family)*/
 header {
     font-family: Palatino Linotype;
     font-size: xx-large;
     font-weight: bolder;
     font-style: oblique;
     font-variant: small-caps;
+    text-shadow: 2px 2px rgb(255, 0, 0);
+
 }
 
 article {
@@ -18,6 +17,7 @@ article {
 
 article h2 {
     font-size: 2em;
+    color: hsla(120, 60%, 70%, 1);;
 
 }
 
@@ -32,3 +32,4 @@ article p {
     font-size: 20px;
     font-weight: 300;
 }
+

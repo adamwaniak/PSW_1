@@ -1,6 +1,7 @@
-body {
-    background-image: url("http://zso1chelmno.pl/images/Macksey-biblioteka.jpg");
-    background-repeat: space;
-    background-position: center;
-    background-attachment: scroll;
+#content {
+    background-image: url("http://clipart-library.com/images/6Tp6RzyGc.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*background-position: center;*/
+    /*background-attachment: fixed;*/
 }

@@ -16,20 +16,18 @@ h1{
     display: inline-block;
     padding-bottom: 15px;
 
-
-
-
 }
-/*zad 8*/
+/*Zad 2 border radius*/
 .nav a{
     color: white;
     background-color: orange;
     padding: 5px;
-    border-radius: 2px;
+    border-radius: 10px;
     text-decoration: none;
     border-width: 4px;
     border-style: solid;
     border-color: black;
+
 }
 
 .nav a:hover{
@@ -47,9 +45,3 @@ h1{
     background-color: mediumaquamarine;
 }
 
-div#page-header{
-
-    border-radius: 2px;
-    top: 0px;
-
-}
