@@ -6,3 +6,42 @@ body{
     background: -moz-linear-gradient(to bottom right, #5cff52, #ffd63d); /* Firefox 3.6 to 15 */
 
 }
+
+#welcome{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image-source: url("https://i.wpimg.pl/O/550x413/i.wp.pl/a/f/jpeg/30379/ksiazki-rozrzucone-sxc.jpeg");
+    -webkit-border-image: url("https://i.wpimg.pl/O/550x413/i.wp.pl/a/f/jpeg/30379/ksiazki-rozrzucone-sxc.jpeg"); /* Safari 3.1-5 */
+    -o-border-image: url("https://i.wpimg.pl/O/550x413/i.wp.pl/a/f/jpeg/30379/ksiazki-rozrzucone-sxc.jpeg"); /* Opera 11-12.1 */
+    border-image: url("https://i.wpimg.pl/O/550x413/i.wp.pl/a/f/jpeg/30379/ksiazki-rozrzucone-sxc.jpeg");
+    border-image-slice: 20%;
+    border-image-repeat: round;
+}
+
+#mainPhoto{
+    -webkit-animation: mymove 5s infinite;
+    -moz-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+}
+
+@-webkit-keyframes mymove {
+    from {width: 10%}
+    to {left: 50%;}
+}
+@-moz-keyframes mymove {
+    from {width: 10%}
+    to {left: 50%;}
+}
+@keyframes mymove {
+    from {width: 10%}
+    to {left: 50%;}
+}
+
+@font-face {
+    font-family: 'Indie Flower', cursive;
+    src: url("https://fonts.googleapis.com/css?family=Indie+Flower");
+}
+
+#welcome{
+    font-family: 'Indie Flower', cursive;
+}
