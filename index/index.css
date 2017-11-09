@@ -13,7 +13,6 @@ body{
     border-image-source: url("https://i.wpimg.pl/O/550x413/i.wp.pl/a/f/jpeg/30379/ksiazki-rozrzucone-sxc.jpeg");
     -webkit-border-image: url("https://i.wpimg.pl/O/550x413/i.wp.pl/a/f/jpeg/30379/ksiazki-rozrzucone-sxc.jpeg"); /* Safari 3.1-5 */
     -o-border-image: url("https://i.wpimg.pl/O/550x413/i.wp.pl/a/f/jpeg/30379/ksiazki-rozrzucone-sxc.jpeg"); /* Opera 11-12.1 */
-    border-image: url("https://i.wpimg.pl/O/550x413/i.wp.pl/a/f/jpeg/30379/ksiazki-rozrzucone-sxc.jpeg");
     border-image-slice: 20%;
     border-image-repeat: round;
 }
@@ -25,16 +24,19 @@ body{
 }
 
 @-webkit-keyframes mymove {
-    from {width: 10%}
-    to {left: 50%;}
+    0% {width: 10%}
+    50% {width: 50%;}
+    100%{width: 10%}
 }
 @-moz-keyframes mymove {
-    from {width: 10%}
-    to {left: 50%;}
+    0% {width: 10%}
+    50% {width: 50%;}
+    100%{width: 10%}
 }
 @keyframes mymove {
-    from {width: 10%}
-    to {left: 50%;}
+    0% {width: 10%}
+    50% {width: 50%;}
+    100%{width: 10%}
 }
 
 @font-face {

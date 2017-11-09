@@ -58,9 +58,8 @@ article p {
 }
 
 #header3{
-    -ms-transform: skewX(160deg);
-    -webkit-transform: skewX(160deg);
-    transform: skewX(160deg);
+
+    transform: skewX(10deg);
 }
 
 #picturesDiv{
@@ -82,20 +81,14 @@ article p {
 }
 
 #firstArticle{
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
+
     column-count: 3;
-    -webkit-column-gap: 20px;
-    -moz-column-gap: 20px;
+
     column-gap: 20px;
-    -webkit-column-rule-style: dotted;
-    -moz-column-rule-style: dotted;
+
     column-rule-style: dotted;
-    -webkit-column-rule-width: 2px;
-    -moz-column-rule-width: 2px;
+
     column-rule-width: 2px;
-    -webkit-column-rule-color: white;
-    -moz-column-rule-color: white;
     column-rule-color: white;
 }
 
