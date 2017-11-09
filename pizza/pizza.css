@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+
+}
+
+body{
+    background-color: rgba(255, 232, 39, 0.71);
+    font-family: pizza-font;
+    font-size: 150%;
+    padding: 30px;
+}
+
+#order {
+    font-size: 300%;
+    margin: 0 auto;
+    max-width: 700px;
+    min-height: 160px;
+    background-color: #cc3931;
+    text-align: center;
+    border-radius: 10px;
+}
+@font-face {
+    font-family: pizza-font;
+    src: url("../fonts/amatic/AmaticSC-Regular.ttf");
+}
