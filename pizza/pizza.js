@@ -37,7 +37,7 @@ function fillOrderDetails() {
     var content = '';
     var sum = 0;
     for (var i = 0; i < len; i++) {
-        content += '<div style="width: 150px; float: left">' + checkedPizzas[i] + '</div>' + '<div style= " text-align: right">' + prices[i] + '</div>'
+        content += '<div style="width: 300px; float: left">' + checkedPizzas[i] + '</div>' + '<div style= " text-align: right">' + prices[i] + '</div>'
         sum += prices[i];
 
     }
