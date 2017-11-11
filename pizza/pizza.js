@@ -9,7 +9,7 @@ function buy() {
         fillOrderDetails()
 
     } else {
-        window.alert('Nic nie zamówiono')
+        window.alert('Nic nie zamówiono');
         document.getElementById('order-details-body').innerHTML = '';
         document.getElementById('order-details-header').innerHTML = '';
     }
@@ -36,13 +36,14 @@ function fillOrderDetails() {
     var prices = getPrices();
     var content = '';
     var sum = 0;
+    var dostawa = Math.floor((Math.random() * 10) + 1);
     for (var i = 0; i < len; i++) {
         content += '<div style="width: 300px; float: left">' + checkedPizzas[i] + '</div>' + '<div style= " text-align: right">' + prices[i] + '</div>'
         sum += prices[i];
 
     }
     content += '<div style= " text-align: right;font-weight: 600">Suma + dostawa:</div>';
-    content += '<div style= " text-align: right">' + sum + "  +  " + Math.floor((Math.random() * 10) + 1) + "  =  " + (sum + Math.floor((Math.random() * 10) + 1)) + '</div>';
+    content += '<div style= " text-align: right">' + sum + "  +  " + dostawa + "  =  " + (sum + dostawa) + '</div>';
     document.getElementById("order-details-address").innerHTML = 'Zamówienie zostanie wysłane na adres: <br>' + address;
     document.getElementById('order-details-body').innerHTML = content;
 }
