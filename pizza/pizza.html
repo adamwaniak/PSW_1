@@ -8,8 +8,87 @@
 </head>
 <body>
 
+<h1>Witaj w Pizzeri Italiana!</h1>
 <div id="order">
     <h2>Zamów swoją pizze!</h2>
 </div>
+
+<div id="order-list">
+    <div id="margarita" class="pizza">
+        <header>Margarita</header>
+        <div class="skladniki">
+            <p>Skladniki: ser sos pomidorowy </p>
+        </div>
+        <div class="cena">
+
+
+            <input type="checkbox" name="pizza" id="mala-margarita" value="mala-margarita"/>
+            <label for="mala-margarita" id="mala-margarita-label">Srednica 20cm: 15zł</label>
+            <br>
+
+            <input type="checkbox" name="pizza" id="duza-margarita" value="duza-margarita"/>
+            <label for="duza-margarita" id="duza-margarita-label">Srednica 42cm: 27zł</label>
+
+        </div>
+
+
+    </div>
+
+    <div id="salami" class="pizza">
+        <header>salami</header>
+        <div class="skladniki">
+            <p>Skladniki: ser sos pomidorowy salami</p>
+        </div>
+        <div class="cena">
+
+
+            <input type="checkbox" name="pizza" id="mala-salami" value="mala-salami"/>
+            <label for="mala-salami" id="mala-salami-label">Srednica 20cm: 18zł</label>
+            <br>
+
+            <input type="checkbox" name="pizza" id="duza-salami" value="duza-salami"/>
+            <label for="duza-salami" id="duza-salami-label">Srednica 42cm: 31zł</label>
+
+        </div>
+
+
+    </div>
+
+    <div id="wiejska" class="pizza">
+        <header>wiejska</header>
+        <div class="skladniki">
+            <p>Skladniki: ser, sos pomidorowy, boczek, cebula, szynka</p>
+        </div>
+        <div class="cena">
+
+
+            <input type="checkbox" name="pizza" id="mala-wiejska" value="mala-wiejska"/>
+            <label for="mala-wiejska" id="mala-wiejska-label">Srednica 20cm: 21zł</label>
+            <br>
+
+            <input type="checkbox" name="pizza" id="duza-wiejska" value="duza-wiejska"/>
+            <label for="duza-wiejska" id="duza-wiejska-label">Srednica 42cm: 35zł</label>
+
+        </div>
+    </div>
+    <div class="clear-float"></div>
+
+
+</div>
+<div class="order-button-container">
+    <button id="order-button" onclick="buy()">Zamów</button>
+</div>
+<div id="order-details">
+    <div id="order-details-header">
+
+    </div>
+    <div id="order-details-body"></div>
+    <div id="order-details-address"></div>
+</div>
+
+
+
+
+
 </body>
 </html>
