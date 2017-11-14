@@ -5,10 +5,14 @@
     <title>Pizza</title>
     <link rel="stylesheet" href="pizza.css" type="text/css">
     <script src="pizza.js"></script>
+    <script type = "text/javascript">
+        document.writeln("<h1>Witaj w Pizzeri Italiana!</h1>");
+        window.addEventListener("load", start, false);
+    </script>
 </head>
 <body>
 
-<h1>Witaj w Pizzeri Italiana!</h1>
+
 <div id="order">
     <h2>Zamów swoją pizze!</h2>
 </div>
@@ -17,7 +21,7 @@
     <div id="margarita" class="pizza">
         <header>Margarita</header>
         <div class="skladniki">
-            <p>Skladniki: ser sos pomidorowy </p>
+            <p>Skladniki: ser, sos pomidorowy </p>
         </div>
         <div class="cena">
 
@@ -37,7 +41,7 @@
     <div id="salami" class="pizza">
         <header>salami</header>
         <div class="skladniki">
-            <p>Skladniki: ser sos pomidorowy salami</p>
+            <p>Skladniki: ser, sos pomidorowy, salami</p>
         </div>
         <div class="cena">
 
@@ -76,7 +80,7 @@
 
 </div>
 <div class="order-button-container">
-    <button id="order-button" onclick="buy()">Zamów</button>
+    <button id="order-button">Zamów</button>
 </div>
 <div id="order-details">
     <div id="order-details-header">
@@ -84,6 +88,7 @@
     </div>
     <div id="order-details-body"></div>
     <div id="order-details-address"></div>
+    <div id="customers-points"></div>
 </div>
 
 
