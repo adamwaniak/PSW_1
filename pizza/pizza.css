@@ -9,6 +9,7 @@ body{
     font-size: 150%;
     padding: 30px;
     min-height: 1000px ;
+    text-align: center;
 }
 
 #order {
@@ -95,4 +96,9 @@ button{
 #order-details-address{
     margin: 10px;
     width: 500px;
+    text-align: left;
+}
+
+#time-to-wait{
+    text-align: center;
 }

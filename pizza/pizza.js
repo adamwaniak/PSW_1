@@ -1,4 +1,5 @@
 checkedPizzas = [];
+var clicked = false;
 
 function start(){
     var button = document.getElementById("order-button");
@@ -10,7 +11,7 @@ function buy() {
 
     if (checkedPizzas.length > 0) {
 
-        fillOrderDetails()
+        fillOrderDetails();
 
     } else {
         window.alert('Nic nie zamówiono');
@@ -45,7 +46,7 @@ function fillOrderDetails() {
     var dostawa = Math.floor((Math.random() * 10) + 1);
     var i =0;
     while (i < len) {
-        content += '<div style="width: 300px; float: left">' + checkedPizzas[i] + '</div>' + '<div style= " text-align: right">' + parseInt(prices[i]) + '</div>'
+        content += '<div style="width: 300px; float: left">' + checkedPizzas[i] + '</div>' + '<div style= " text-align: right">' + parseInt(prices[i]) + '</div>';
         sum += parseInt(prices[i]);
         i++;
     }
@@ -87,4 +88,36 @@ function countPoints(sum) {
             document.getElementById("customers-points").innerHTML = 'Dodatkowo otrzymujesz <b>3 punkty</b> na swoją Kartę Klienta';
             break;
     }
+}
+
+// całe 1 zadanie
+function confirm(){
+    checkOrder();
+
+    var btn = document.createElement("BUTTON");
+    btn.setAttribute( "id", "confirm-button" );
+    var btnName = document.createTextNode("Zrealizuj zamówienie");
+    btn.appendChild(btnName);
+
+    var para = document.createElement("P");
+    para.setAttribute("id", "time-to-wait");
+    var text = document.createTextNode("Jeśli zamówisz teraz, zamówienie będzie gotowe za 30 minut");
+    para.appendChild(text);
+
+    if((clicked == false) && (checkedPizzas.length > 0) ){
+        document.body.appendChild(btn);
+        document.body.insertBefore(para, btn);
+        clicked = true;
+    }
+    else if ((clicked == true) && (checkedPizzas.length > 0)){
+        document.body.replaceChild(btn, document.getElementById("confirm-button"));
+    }
+    else{
+        var button = document.getElementById("confirm-button");
+        button.parentNode.removeChild(button);
+        document.body.removeChild(document.getElementById("time-to-wait"));
+        clicked = false;
+    }
+
+
 }
