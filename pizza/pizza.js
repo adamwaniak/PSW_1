@@ -6,6 +6,8 @@ function start(){
     button.addEventListener("click", buy, false);
 }
 
+onload = start;
+
 function buy() {
     checkOrder();
 
@@ -29,14 +31,13 @@ function checkOrder() {
     var len = cboxes.length;
 
     var j = 0;
-    for (var i = 0; i < len; i++) {
+    for (i = 0; i < len; i+=1) {
         if (cboxes[i].checked) {
             checkedPizzas[j] = cboxes[i].value;
             j++;
         }
     }
 }
-
 function fillOrderDetails() {
     var address = window.prompt("Adres:");
     document.getElementById('order-details-header').innerHTML = '<div style="width: 150px; float: left">Wybrane pizze:</div>' + '<div style="text-align: right">Cena:</div>';
@@ -53,7 +54,7 @@ function fillOrderDetails() {
     content += '<div style= " text-align: right;font-weight: 600">Suma + dostawa:</div>';
     content += '<div style= " text-align: right">' + sum + "  +  " + dostawa + "  =  " + (sum + dostawa) + '</div>';
     if(address == null){
-        document.getElementById("order-details-address").innerHTML = 'Zamówienie zostanie wysłane na adres: <br>' + " ";
+        window.alert("Brak adresu!")
     }
     else{
         document.getElementById("order-details-address").innerHTML = 'Zamówienie zostanie wysłane na adres: <br>' + address;

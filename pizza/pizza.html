@@ -5,14 +5,34 @@
     <title>Pizza</title>
     <link rel="stylesheet" href="pizza.css" type="text/css">
     <script src="pizza.js"></script>
-    <script type = "text/javascript">
-        document.writeln("<h1>Witaj w Pizzeri Italiana!</h1>");
-        window.addEventListener("load", start, false);
-    </script>
+    <script src="CSSChanger.js"></script>
+
 </head>
 <body>
 
+<div id="style-changer">
+    Wybierz swój styl!
+    <br>
+    <details class="style">
+        <summary>Kolor tła</summary>
+        <label id="background-color-yellow" onclick="changeBackgroundColor('yellow')">Żółty</label>
+        <label id="background-color-red" onclick="changeBackgroundColor('red')">Czerwony</label>
+    </details>
+    <details class="style">
+        <summary>Kolor tekstu</summary>
+        <label id="text-color-black" onclick="changeTextColor('black')">Czarny</label>
+        <label id="text-color-grey" onclick="changeTextColor('purple')">Filotewoy</label>
+    </details>
+    <details class="style">
+        <summary>Czcionka</summary>
+        <label  onclick="changeTextFont('pizza')">Pizza</label>
+        <label  onclick="changeTextFont('roman')">Times New Roman</label>
+    </details>
+</div>
+<header id="header">
+    <h1>Witaj w Pizzeri Italiana!</h1>
 
+</header>
 <div id="order">
     <h2>Zamów swoją pizze!</h2>
 </div>
