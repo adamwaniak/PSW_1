@@ -2,6 +2,7 @@ checkedPizzas = [];
 var clicked = false;
 
 function start(){
+    domCollections();
     var button = document.getElementById("order-button");
     button.addEventListener("click", buy, false);
 }
@@ -91,7 +92,7 @@ function countPoints(sum) {
     }
 }
 
-// całe 1 zadanie
+// zadanie 1
 function confirm(){
     checkOrder();
 
@@ -106,19 +107,32 @@ function confirm(){
     para.appendChild(text);
 
     if((clicked == false) && (checkedPizzas.length > 0) ){
-        document.body.appendChild(btn);
-        document.body.insertBefore(para, btn);
+        document.getElementById("order-details").appendChild(btn);
+        document.getElementById("order-details").insertBefore(para, btn);
         clicked = true;
     }
     else if ((clicked == true) && (checkedPizzas.length > 0)){
-        document.body.replaceChild(btn, document.getElementById("confirm-button"));
+        document.getElementById("order-details").replaceChild(btn, document.getElementById("confirm-button"));
     }
     else{
         var button = document.getElementById("confirm-button");
         button.parentNode.removeChild(button);
-        document.body.removeChild(document.getElementById("time-to-wait"));
+        document.getElementById("order-details").removeChild(document.getElementById("time-to-wait"));
         clicked = false;
     }
+}
 
 
+// zadanie 2
+function domCollections(){
+    var imgs = document.images.length; // 0
+    var links = document.links.length; // 3
+    var forms = document.forms.length; // 0
+    var anchors =document.anchors.length; // 0
+
+    if (imgs == 0 && forms == 0 && anchors == 0 && links > 0){
+        document.getElementById("firstLink").innerHTML = document.links.item(0).href;
+        document.getElementById("secondLink").innerHTML = document.links.namedItem("secondLink").href;
+        document.getElementById("thirdLink").innerHTML = document.links[2].href;
+    }
 }
