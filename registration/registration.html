@@ -8,7 +8,7 @@
     <meta name="description" content="Formluarz rejestracyjny dla nowych użytkowników biblioteki miejskiej w Opocznie">
     <link rel="stylesheet" href="../main.css" type="text/css"/>
     <link rel="stylesheet" href="registration.css" type="text/css"/>
-
+    <script src="registration.js"></script>
 
 </head>
 <body>
@@ -26,30 +26,30 @@
 </div>
 <h1>Rejestracja do biblioteki</h1>
 
-<form name="personalInformationForm" method="post" action="http://www.deitel.com">
+<form name="personalInformationForm"  onsubmit="onSubmit()" onreset="onReset()">
     <fieldset>
         <legend>Informacje osobowe</legend>
         <br>
 
-        <label for="firstName">
+        <label for="firstName" >
             Imię:<br>
-            <input type="text" name="firstName" id="firstName" autocomplete="on" placeholder="Imię" autofocus>
+            <input  name="firstName" id="firstName" autocomplete="on" placeholder="Imię" autofocus onfocus="changeBackgroundColor(this)" onblur="onBlur(this)">
         </label><br>
 
-        <label for="lastName">
+        <label for="lastName" >
             Nazwisko: <br>
-            <input type="text" name="lastName" id="lastName" autocomplete="on" placeholder="Nazwisko" required>
+            <input  name="lastName" id="lastName" autocomplete="on" placeholder="Nazwisko" required onfocus="changeBackgroundColor(this)" onblur="onBlur(this)">
         </label><br>
 
         <label>
             Płeć:<br>
-            <input type="radio" checked="checked" value="Mężczyzna" name="gender"> Mężczyzna<br>
+            <input type="radio" value="Mężczyzna" name="gender"> Mężczyzna<br>
             <input type="radio" value="Kobieta" name="gender"> Kobieta<br>
         </label>
 
         <label>
             Miesiąc urodzin: <br>
-            <input list="months" autocomplete="on" name="month">
+            <input list="months" autocomplete="on" name="month" onfocus="changeBackgroundColor(this)" onblur="onBlur(this)">
             <datalist id="months">
                 <option value="January"></option>
                 <option value="February"></option>
@@ -68,12 +68,12 @@
 
         <label>
             Adres mailowy: <br>
-            <input type="email" autocomplete="on" name="email" id="email" required>
+            <input type="email" autocomplete="on" name="email" id="email" required onfocus="changeBackgroundColor(this)" onblur="onBlur(this)">
         </label> Na przykład: example@example.com <br>
 
         <label>
             Telefon: <br>
-            <input type="tel" autocomplete="on" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+            <input type="tel" autocomplete="on" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" onfocus="changeBackgroundColor(this)" onblur="onBlur(this)">
         </label> Na przykład: 312-719-545<br>
 
 

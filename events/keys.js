@@ -1,5 +1,4 @@
 function isKeyPressed(event) {
-    var x = event.keyCode;
     if (event.shiftKey) {
         alert("The SHIFT key was pressed!");
     } else if (event.ctrlKey) {
@@ -27,19 +26,14 @@ function showCoords(event) {
     document.getElementById("relative-coordinates").innerHTML = coords;
 }
 
-function showRelativeCoords(event) {
-    var x = event.screenX;
-    var y = event.screenY;
-    var coords = "Położenie względem całego ekranu X: " + x + ", Y: " + y;
-    document.getElementById("relative-coordinates").innerHTML = coords;
-}
+
 
 function goBack() {
-    document.getElementById('go-back').innerHTML = "Wracaj!"
+    document.getElementById('go-back').innerHTML = "Wracaj!";
 
 }
 
 function isBack() {
-    document.getElementById('go-back').innerHTML = "Nie wychodz nigdzie!"
+    document.getElementById('go-back').innerHTML = "Nie wychodz nigdzie!";
 
 }
