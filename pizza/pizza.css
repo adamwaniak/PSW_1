@@ -116,3 +116,7 @@ button{
 #time-to-wait{
     text-align: center;
 }
+
+body details{
+    text-align: left;
+}
