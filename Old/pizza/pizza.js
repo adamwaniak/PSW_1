@@ -98,6 +98,7 @@ function confirm(){
 
     var btn = document.createElement("BUTTON");
     btn.setAttribute( "id", "confirm-button" );
+
     var btnName = document.createTextNode("Zrealizuj zamówienie");
     btn.appendChild(btnName);
 
