@@ -18,27 +18,36 @@
 <?php
 $name = $surname = $email = $password = $passwordRepeat = $country = $policy = "";
 $nameErr = $surnameErr = $emailErr = $passwordErr = $passwordRepeatErr = $countryErr = $policyErr = "";
+const EMAIL_REGEX = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    get_input($name,"name",$nameErr, "Imie jest wymagane");
-    get_input($surname,"surname",$surnameErr, "Nazwisko jest wymagane");
-    get_input($email,"email",$emailErr, "Email jest wymagany");
-    get_input($password,"password",$passwordErr, "Hasło jest wymagane");
-    get_input($passwordRepeat,"password-repeat",$passwordRepeatErr, "Hasła się nie zgadzają");
-    get_input($country,"country",$countryErr, "");
-    get_input($policy,"policy",$policyErr, "Wymagana jest akcpetacja regulaminu");
-    check_password($password,$passwordRepeat,$passwordRepeatErr, "Hasła się nie zgadzają");
-
-
-
-
-
-
+    get_input($name, "name", $nameErr, "Imie jest wymagane");
+    get_input($surname, "surname", $surnameErr, "Nazwisko jest wymagane");
+    get_input($email, "email", $emailErr, "Email jest wymagany");
+    get_input($password, "password", $passwordErr, "Hasło jest wymagane");
+    get_input($passwordRepeat, "password-repeat", $passwordRepeatErr, "Hasła się nie zgadzają");
+    get_input($country, "country", $countryErr, "");
+    get_input($policy, "policy", $policyErr, "Wymagana jest akcpetacja regulaminu");
+    check_password($password, $passwordRepeat, $passwordRepeatErr, "Hasła się nie zgadzają");
+    check_email($email, $emailErr, "Podany email jest nieprawidłowy");
 
 
 }
+function check_email(&$email, &$emailErr, $errorMsg)
+{
+    if (!empty($email)) {
+        if (preg_match(EMAIL_REGEX, $email)) {
+            return true;
+        } else {
+            $emailErr = $errorMsg;
+            return false;
+        }
+    }
+}
 
-function check_password(&$password, &$passwordRepeat, &$errorVariable, $errorMsg ){
+function check_password(&$password, &$passwordRepeat, &$errorVariable, $errorMsg)
+{
     if ($password != $passwordRepeat) {
         $errorVariable = $errorMsg;
         return false;
@@ -47,7 +56,8 @@ function check_password(&$password, &$passwordRepeat, &$errorVariable, $errorMsg
     }
 }
 
-function get_input(&$variable, $input, &$errorVariable, $errorMsg ){
+function get_input(&$variable, $input, &$errorVariable, $errorMsg)
+{
     if (empty($_POST[$input])) {
         $errorVariable = $errorMsg;
     } else {
@@ -113,7 +123,8 @@ function test_input($data)
         <h1 class="display-3">Arte Art Prize</h1>
         <p class="lead">Rejestracja użytkownika</p>
         <hr class="my-4">
-        <p>Wzięcie udziału w konkursie wymaga podania przez Ciebie kilku informacji. Wszystkie dane zawarte są w regulaminie konkursu.</p>
+        <p>Wzięcie udziału w konkursie wymaga podania przez Ciebie kilku informacji. Wszystkie dane zawarte są w
+            regulaminie konkursu.</p>
         <p class="lead">
             <a class="btn btn-primary btn-lg" href="#" role="button">Dowiedz się więcej</a>
         </p>
@@ -143,7 +154,7 @@ function test_input($data)
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Wpisz email"
+            <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Wpisz email"
                    name="email">
             <small class="text-danger"> <?php echo $emailErr; ?></small>
             <!--                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
