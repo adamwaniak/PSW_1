@@ -1,3 +1,20 @@
+<?php
+session_start();
+if (!isset($_COOKIE['cookie_color'])) {
+    setcookie('cookie_color', 'white', time() + (86400 * 30), "/");
+}
+if (isset($_GET['color'])) {
+    if ($_GET['color'] == 'white') {
+        setcookie('cookie_color', 'white', time() + (86400 * 30), "/");
+        $color = 'white';
+    } elseif ($_GET['color'] == 'black') {
+        setcookie('cookie_color', 'black', time() + (86400 * 30), "/");
+        $color = 'black';
+    }
+} else {
+    $color = $_COOKIE['cookie_color'];
+}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -10,13 +27,45 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: <?= $color?>;
+
+
+        }
+        form{
+            color: <?php if($color=='white'){
+                echo 'black';
+            }else {
+                echo 'white';
+            } ?>;
+        }
+    </style>
+
+    <script>
+        function changeBackground(color) {
+            switch (color) {
+                case 'white':
+                    document.getElementsByTagName('body').style.backgroundColor = 'white';
+                    break;
+                case 'black':
+                    document.getElementsByTagName('body').style.backgroundColor = 'black';
+                    break;
+            }
+        }
+    </script>
 </head>
 
 
 <body>
 
 <?php
-include 'validation.php'
+include 'validation.php';
+?>
+<?php
+
+
 ?>
 
 
@@ -24,13 +73,18 @@ include 'validation.php'
 <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-info">
     <div class="container">
         <a class="navbar-brand mr-5" href="#">Arte</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a href="#" class="nav-link">Regulamin</a>
+                </li>
+                <li class="nav-item">
+                    <a href="registration.php?color=black" class="nav-link">Czarne
+                        tło</a>
+                </li>
+                <li class="nav-item">
+                    <a href="registration.php?color=white" class="nav-link">Białe
+                        tło</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
