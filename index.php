@@ -1,6 +1,6 @@
 <?php
-include 'login.php';
 session_start();
+include 'login.php';
 ?>
 
 <!doctype html>
