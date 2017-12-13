@@ -1,7 +1,10 @@
 <?php
 session_start();
-include 'login.php';
+include_once 'database.php';
 include 'validation.php';
+include 'login.php';
+include 'insert.php';
+include 'update.php';
 if (!isset($_COOKIE['cookie_color'])) {
     setcookie('cookie_color', 'white', time() + (86400 * 30), "/");
 }
@@ -16,6 +19,28 @@ if (isset($_GET['color'])) {
 } else {
     $color = $_COOKIE['cookie_color'];
 }
+$oldname = $oldsurname = $oldemail  = $oldcountry  = "";
+
+if(!empty($_SESSION['email'])){
+    $sesionEmail = $_SESSION['email'];
+    $sql = "SELECT name,lastName,email,country FROM users WHERE email='$sesionEmail'";
+
+    if($result=mysqli_query($conn, $sql)){
+        $row= mysqli_fetch_row($result);
+        $oldname = $row[0];
+        $oldsurname = $row[1];
+        $oldemail = $row[2];
+        $oldcountry = $row[3];
+    } else{
+        echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+    }
+
+}
+
+
+
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -81,21 +106,21 @@ if (isset($_GET['color'])) {
         <div class="form-group">
             <label for="name">Imię</label>
             <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
-                   placeholder="Wpisz swoje imię" name="name">
+                   placeholder="Wpisz swoje imię" name="name" value=<?=$oldname?>>
             <small class="text-danger"> <?php echo $nameErr; ?></small>
             <!--                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
         </div>
         <div class="form-group">
             <label for="surname">Nazwisko</label>
             <input type="text" class="form-control" id="surname" aria-describedby="emailHelp"
-                   placeholder="Wpisz swoje nazwisko" name="surname">
+                   placeholder="Wpisz swoje nazwisko" name="surname" value=<?=$oldsurname?>>
             <small class="text-danger"> <?php echo $surnameErr; ?></small>
             <!--                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
         </div>
         <div class="form-group">
             <label for="email">Email</label>
             <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Wpisz email"
-                   name="email">
+                   name="email" value=<?=$oldemail?>>
             <small class="text-danger"> <?php echo $emailErr; ?></small>
             <!--                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
         </div>
@@ -130,7 +155,15 @@ if (isset($_GET['color'])) {
                 <small class="text-danger"> <?php echo $policyErr; ?></small>
             </label>
         </div>
-        <input type="submit" class="btn btn-outline-primary" value="Rejestruj">
+        <input type="submit" class="btn btn-outline-primary" name=<?php if(empty($_SESSION['email'])){
+            echo 'register';
+        }else{
+            echo 'update';
+        } ?> value=<?php if(empty($_SESSION['email'])){
+            echo 'Rejestruj';
+        }else{
+            echo 'Akcpetuj';
+        } ?>>
         <input type="reset" class="btn btn-outline-danger" value="Wyczyść">
     </form>
 </div>

@@ -17,6 +17,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 }
+
+function validate()
+{
+    if (get_input($name, "name", $nameErr, "Imie jest wymagane") &&
+        get_input($surname, "surname", $surnameErr, "Nazwisko jest wymagane") &&
+        get_input($email, "email", $emailErr, "Email jest wymagany") &&
+        get_input($password, "password", $passwordErr, "Hasło jest wymagane") &&
+        get_input($passwordRepeat, "password-repeat", $passwordRepeatErr, "Hasła się nie zgadzają") &&
+        get_input($country, "country", $countryErr, "") &&
+        get_input($policy, "policy", $policyErr, "Wymagana jest akcpetacja regulaminu") &&
+        check_password($password, $passwordRepeat, $passwordRepeatErr, "Hasła się nie zgadzają") &&
+        check_email($email, $emailErr, "Podany email jest nieprawidłowy")) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function check_email(&$email, &$emailErr, $errorMsg)
 {
     if (!empty($email)) {
@@ -43,8 +61,10 @@ function get_input(&$variable, $input, &$errorVariable, $errorMsg)
 {
     if (empty($_POST[$input])) {
         $errorVariable = $errorMsg;
+        return false;
     } else {
         $variable = test_input($_POST[$input]);
+        return true;
     }
 }
 

@@ -24,6 +24,9 @@ echo '
                     <a href="registration.php?color=white" class="nav-link">Białe
                         tło</a>
                 </li>
+                <li class="nav-item">
+                    <a href="playground.php" class="nav-link">Playground</a>
+                </li>
 
             </ul>
 
