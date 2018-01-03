@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 include 'login.php';
@@ -9,19 +10,7 @@ if(empty($_SESSION['email'])){
 
 }
 
-$oldname = $oldsurname = $oldemail  = $oldcountry  = "";
-$sesionEmail = $_SESSION['email'];
-$sql = "SELECT name,lastName,email,country FROM users WHERE email='$sesionEmail'";
 
-if($result=mysqli_query($conn, $sql)){
-    $row= mysqli_fetch_row($result);
-    $oldname = $row[0];
-    $oldsurname = $row[1];
-    $oldemail = $row[2];
-    $oldcountry = $row[3];
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
-}
 
 
 ?>
